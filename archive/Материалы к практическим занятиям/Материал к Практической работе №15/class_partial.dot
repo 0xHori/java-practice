@@ -1,0 +1,16 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+ch [label="{NotificationChannel||+ supports(NotificationRequest) boolean\l+ send(NotificationRequest) NotificationResult\l}", fillcolor="#F7FBFF", color="#2F5597"];
+em [label="{EmailChannel\nTODO||+ supports(...)\l+ send(...)\l}", fillcolor="#FDE9E7", color="#C00000"];
+sms [label="{SmsChannel\nTODO||+ supports(...)\l+ send(...)\l}", fillcolor="#FDE9E7", color="#C00000"];
+in [label="{InternalChannel\nTODO||+ supports(...)\l+ send(...)\l}", fillcolor="#FDE9E7", color="#C00000"];
+f [label="{ChannelFactory\nTODO||+ get(ChannelType) NotificationChannel\l}", fillcolor="#FDE9E7", color="#C00000"];
+s [label="{NotificationService|- factory ChannelFactory\l|+ notify(NotificationRequest) NotificationResult\l}", fillcolor="#F7FBFF", color="#2F5597"];
+em -> ch [label="implements",arrowhead=empty,style=dashed];
+sms -> ch [label="implements",arrowhead=empty,style=dashed];
+in -> ch [label="implements",arrowhead=empty,style=dashed];
+f -> ch [label="creates",style=dashed,arrowhead=open];
+s -> f [label="1",arrowtail=odiamond,dir=both];
+}

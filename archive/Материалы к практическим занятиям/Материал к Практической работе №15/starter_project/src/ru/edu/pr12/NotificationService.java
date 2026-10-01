@@ -1,0 +1,1 @@
+package ru.edu.pr12; public class NotificationService { private final ChannelFactory factory; public NotificationService(ChannelFactory f){factory=f;} public NotificationResult notify(NotificationRequest r){ NotificationChannel c=factory.get(r.type()); if(!c.supports(r)) return new NotificationResult(false,"invalid recipient"); return c.send(r); } }

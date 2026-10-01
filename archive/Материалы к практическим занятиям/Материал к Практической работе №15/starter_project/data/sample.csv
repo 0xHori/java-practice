@@ -1,0 +1,4 @@
+type;recipient;message
+EMAIL;user@example.com;Meeting moved
+SMS;+79990000000;Code 1234
+INTERNAL;u-100;Task updated

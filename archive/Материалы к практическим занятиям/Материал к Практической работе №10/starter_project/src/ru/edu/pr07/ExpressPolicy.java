@@ -1,0 +1,1 @@
+package ru.edu.pr07; public class ExpressPolicy implements DeliveryPolicy { public boolean supports(DeliveryRequest r){ return false; /* TODO 3 */ } public double calculateCost(DeliveryRequest r){ return 0; /* TODO 4 */ } }

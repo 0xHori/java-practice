@@ -1,0 +1,1 @@
+package ru.edu.pr13; public class DocumentProcessor { public ProcessingResult process(Document d) { if(d.sizeKb()<0) throw new IllegalArgumentException("size"); long x=(long)d.id().hashCode()*31+d.sizeKb(); return new ProcessingResult(d.id(),x); } }

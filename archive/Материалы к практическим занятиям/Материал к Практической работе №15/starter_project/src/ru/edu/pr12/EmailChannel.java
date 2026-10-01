@@ -1,0 +1,1 @@
+package ru.edu.pr12; public class EmailChannel implements NotificationChannel { public boolean supports(NotificationRequest r){ /* TODO 1 */ return false; } public NotificationResult send(NotificationRequest r){ /* TODO 2 */ return new NotificationResult(false,"TODO"); } }

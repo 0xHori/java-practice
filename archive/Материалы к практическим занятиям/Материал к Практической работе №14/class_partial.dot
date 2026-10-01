@@ -1,0 +1,10 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+c [label="{BonusCalculator\nTODO||+ calculate(EmployeePerformance) double\l}", fillcolor="#FDE9E7", color="#C00000"];
+p [label="{EmployeePerformance|- salary double\l- kpiPercent double\l- rating int\l- years int\l|+ constructor\l+ getters\l}", fillcolor="#F7FBFF", color="#2F5597"];
+t [label="{BonusCalculatorTest\nTODO||+ boundary tests\l+ invalid input tests\l+ parameterized tests\l}", fillcolor="#FDE9E7", color="#C00000"];
+c -> p [label="uses",style=dashed,arrowhead=open];
+t -> c [label="tests",style=dashed,arrowhead=open];
+}

@@ -1,0 +1,1 @@
+package ru.edu.pr12; public class SmsChannel implements NotificationChannel { public boolean supports(NotificationRequest r){ /* TODO 3 */ return false; } public NotificationResult send(NotificationRequest r){ /* TODO 4 */ return new NotificationResult(false,"TODO"); } }

@@ -1,0 +1,28 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.25, ranksep=0.35];
+node [shape=box, style="rounded,filled", fontname="Times New Roman", fontsize=11, color="#2F5597", fillcolor="#EAF2F8", margin="0.12,0.08"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+start [label="Начало", shape=oval, fillcolor="#E2F0D9", color="#548235"];
+end [label="Завершение", shape=oval, fillcolor="#FCE4D6", color="#C65911"];
+n1 [label="Получить список документов" ,shape=parallelogram,fillcolor="#E4DFEC",color="#7030A0"];
+n2 [label="Создать фиксированный пул" ];
+n3 [label="TODO A1 Создать Callable для каждого документа" ,fillcolor="#F4CCCC",color="#C00000",style="rounded,dashed,filled"];
+n4 [label="Отправить задачи в ExecutorService" ];
+n5 [label="Получать результаты Future" ];
+n6 [label="Задача завершилась успешно" ,shape=diamond,fillcolor="#FFF2CC",color="#BF9000"];
+n7 [label="Безопасно обновить агрегаты" ];
+n8 [label="Зафиксировать ошибку конкретного документа" ];
+n9 [label="Закрыть пул" ];
+start -> n1;
+n1 -> n2;
+n2 -> n3;
+n3 -> n4;
+n4 -> n5;
+n5 -> n6;
+n6 -> n7 [label="да"];
+n6 -> n8 [label="нет"];
+n7 -> n5 [label="ещё результаты"];
+n8 -> n5 [label="ещё результаты"];
+n5 -> n9 [label="все получены"];
+n9 -> end;
+}

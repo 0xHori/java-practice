@@ -1,0 +1,1 @@
+package ru.edu.pr12; public class InternalChannel implements NotificationChannel { public boolean supports(NotificationRequest r){ return r.recipient()!=null && !r.recipient().isBlank(); } public NotificationResult send(NotificationRequest r){ return new NotificationResult(true,"internal"); } }

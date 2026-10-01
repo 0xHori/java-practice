@@ -1,0 +1,10 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+b [label="{Booking|- id String\l- roomId String\l- start LocalDateTime\l- end LocalDateTime\l|+ duration() Duration\l}", fillcolor="#F7FBFF", color="#2F5597"];
+r [label="{BookingRepository||+ save(Booking)\l+ findByRoom(String) List\l}", fillcolor="#F7FBFF", color="#2F5597"];
+s [label="{BookingService\nTODO|- repository BookingRepository\l|+ book(...) Booking\l+ isAvailable(...) boolean\l- overlaps(Booking,...) boolean\l}", fillcolor="#FDE9E7", color="#C00000"];
+s -> r [label="1",arrowtail=odiamond,dir=both];
+r -> b [label="0..*",arrowtail=odiamond,dir=both];
+}
