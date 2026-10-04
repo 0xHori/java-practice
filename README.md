@@ -5,4 +5,5 @@
 - Автор: Савченко Андрей
 
 ## Выполненные практики:
-- Нет
+- [Практики 1-2](https://github.com/0xHori/java-practice/tree/main/PR1-2)
+- [Практики 3-4](https://github.com/0xHori/java-practice/tree/main/PR3-4)
